@@ -26,6 +26,7 @@ public class GameControll : MonoBehaviour
         if (currentState == State.Alive)
         {
             RotateLevel();
+            if (transform.position.y <= -15f) { StartDeathSequence(); } //preventing from falling out of labirinth
         }
     }
 
