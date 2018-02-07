@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1325784352966790}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.346, y: 3.89, z: -0.42}
+  m_LocalPosition: {x: -7.62, y: 7.86, z: 0.26}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children: []
   m_Father: {fileID: 0}
@@ -114,6 +114,9 @@ MonoBehaviour:
   level: {fileID: 0}
   currentState: 0
   levelLoadDelay: 1
+  defaultMaterial: {fileID: 2100000, guid: e32f9b10b56ec8c47bd1d79e864589e6, type: 2}
+  flamingMaterial: {fileID: 2100000, guid: 57e44baa6e775ed4290b0d3ddda70ba6, type: 2}
+  icyMaterial: {fileID: 2100000, guid: 3b488680fb8084a4c8000c1a7513da2f, type: 2}
 --- !u!135 &135471872987681142
 SphereCollider:
   m_ObjectHideFlags: 1

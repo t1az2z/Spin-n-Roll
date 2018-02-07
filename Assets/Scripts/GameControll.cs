@@ -22,7 +22,7 @@ public class GameControll : MonoBehaviour
         if (gameManagmentAccess.currentState == GameManagment.State.Alive)
         {
             Controls();
-            if (transform.position.y <= -10f) { gameManagmentAccess.StartDeathSequence(); } //preventing from falling out of labirinth
+            if (player.transform.position.y <= -10f) { gameManagmentAccess.StartDeathSequence(); } //preventing from falling out of labirinth
         }
     }
     
