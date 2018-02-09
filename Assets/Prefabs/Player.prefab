@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 23582052398195138}
   - component: {fileID: 54543806843183688}
   - component: {fileID: 114791830919301502}
+  - component: {fileID: 108944392183639348}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -37,13 +38,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1325784352966790}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.62, y: 7.86, z: 0.26}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalRotation: {x: -0.9752672, y: -0, z: -0, w: -0.22102925}
+  m_LocalPosition: {x: 2.479, y: 2.72, z: -0.677}
+  m_LocalScale: {x: 0.8183999, y: 0.81840014, z: 0.81840014}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -205.539, y: 0, z: 0}
 --- !u!23 &23582052398195138
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -58,7 +59,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e32f9b10b56ec8c47bd1d79e864589e6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -92,14 +93,50 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1325784352966790}
   serializedVersion: 2
-  m_Mass: 600
+  m_Mass: 2000
   m_Drag: 0.1
   m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 1
+  m_Interpolate: 2
   m_Constraints: 8
   m_CollisionDetection: 2
+--- !u!108 &108944392183639348
+Light:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1325784352966790}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 0.11891478, g: 0.49264705, b: 0, a: 1}
+  m_Intensity: 4
+  m_Range: 0.6
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!114 &114791830919301502
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -114,9 +151,9 @@ MonoBehaviour:
   level: {fileID: 0}
   currentState: 0
   levelLoadDelay: 1
-  defaultMaterial: {fileID: 2100000, guid: e32f9b10b56ec8c47bd1d79e864589e6, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 3b488680fb8084a4c8000c1a7513da2f, type: 2}
   flamingMaterial: {fileID: 2100000, guid: 57e44baa6e775ed4290b0d3ddda70ba6, type: 2}
-  icyMaterial: {fileID: 2100000, guid: 3b488680fb8084a4c8000c1a7513da2f, type: 2}
+  stoneMaterial: {fileID: 2100000, guid: 1ba12bfe1d73d1f4da71e796c3b65ef3, type: 2}
 --- !u!135 &135471872987681142
 SphereCollider:
   m_ObjectHideFlags: 1

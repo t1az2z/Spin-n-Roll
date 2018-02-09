@@ -6,7 +6,10 @@ TagManager:
   tags:
   - Enemy
   - FireBuff
-  - IceBuff
+  - IceWall
+  - WoodWall
+  - Undefined
+  - StoneBuff
   layers:
   - Default
   - TransparentFX

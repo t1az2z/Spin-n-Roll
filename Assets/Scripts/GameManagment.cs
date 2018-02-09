@@ -13,12 +13,12 @@ public class GameManagment : MonoBehaviour
     [SerializeField] float levelLoadDelay = 3f;
 
 
-    enum PlayerState { Default, Flaming, Icy};
+    enum PlayerState { Default, Flaming, Stone};
     PlayerState currentPlayerState = PlayerState.Default;
     Material currentMaterial;
     [SerializeField] Material defaultMaterial;
     [SerializeField] Material flamingMaterial;
-    [SerializeField] Material icyMaterial;
+    [SerializeField] Material stoneMaterial;
 
     // Use this for initialization
     void Start ()
@@ -43,21 +43,41 @@ public class GameManagment : MonoBehaviour
                 StartDeathSequence();
                 break;
             case "FireBuff":
-                print("Fire");
                 Destroy(collision.gameObject);
                 FireBuffPickingUp();
                 break;
-            case "IceBuff":
+            case "StoneBuff":
                 Destroy(collision.gameObject);
-                IceBuffPickingUp();
+                StoneBuffPickingUp();
+                break;
+            case "IceWall":
+                collideWithObsticles("IceWall", collision);
+                break;
+            case "WoodWall":
+                collideWithObsticles("WoodWall", collision);
                 break;
         }
     }
 
-    private void IceBuffPickingUp()
+    private void collideWithObsticles(string tag, Collision collision)
     {
-        currentPlayerState = PlayerState.Icy;
-        gameObject.GetComponent<Renderer>().material = icyMaterial;
+        switch (tag)
+        {
+            case "IceWall":
+                if (currentPlayerState != PlayerState.Flaming) { return; }
+                Destroy(collision.gameObject);
+                break;
+            case "WoodWall":
+                if (currentPlayerState != PlayerState.Stone) { return; }
+                Destroy(collision.gameObject);
+                break;
+        }
+    }
+
+    private void StoneBuffPickingUp()
+    {
+        currentPlayerState = PlayerState.Stone;
+        gameObject.GetComponent<Renderer>().material = stoneMaterial;
     }
 
     void FireBuffPickingUp()
