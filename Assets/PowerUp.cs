@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PowerUp : MonoBehaviour {
-    
 
-
+    public GameObject firePickingUpParticle;
+    private GameObject level;
+    private void Start()
+    {
+        level = GameObject.Find("Level");
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -19,6 +23,7 @@ public class PowerUp : MonoBehaviour {
         GameManagment buff = player.GetComponent<GameManagment>();
         if (gameObject.CompareTag("FireBuff"))
         {
+            Instantiate(firePickingUpParticle, player.transform.position, level.transform.rotation, level.transform);
             buff.FireBuffPickingUp();
 
         }
