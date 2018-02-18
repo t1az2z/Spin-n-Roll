@@ -15,14 +15,17 @@ public class GameControll : MonoBehaviour
     {
         gameManagmentAccess = player.GetComponent<GameManagment>();
 	}
-	
-	// Update is called once per frame
-	void FixedUpdate ()
+
+    // Update is called once per frame
+    void FixedUpdate()
     {
         if (gameManagmentAccess.currentState == GameManagment.State.Alive)
         {
             Controls();
-            if (player.transform.position.y <= -10f) { gameManagmentAccess.StartDeathSequence(); } //preventing from falling out of labirinth
+            if (player.transform.position.y <= -10f || player.transform.position.y >= 10f || player.transform.position.x <=-10f || player.transform.position.x >= 10f)
+            {
+                gameManagmentAccess.StartDeathSequence();
+            } //preventing from falling out of labirinth
         }
     }
     

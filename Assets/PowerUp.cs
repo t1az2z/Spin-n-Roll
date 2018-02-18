@@ -27,10 +27,10 @@ public class PowerUp : MonoBehaviour {
             buff.FireBuffPickingUp();
 
         }
-        else if (gameObject.CompareTag("StoneBuff"))
+        /*else if (gameObject.CompareTag("StoneBuff"))
         {
             buff.StoneBuffPickingUp();
-        }
+        }*/
         Destroy(gameObject);
         
     }
