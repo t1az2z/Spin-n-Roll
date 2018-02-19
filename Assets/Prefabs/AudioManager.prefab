@@ -102,7 +102,7 @@ MonoBehaviour:
     source: {fileID: 0}
     isPlaying: 0
   - name: Titles
-    clip: {fileID: 8300000, guid: 6def03bad79153241967382f5346dbd4, type: 3}
+    clip: {fileID: 8300000, guid: 6572b71389cd71846a7954b0da68ce4d, type: 3}
     volume: 0.438
     pitch: 1
     loop: 0

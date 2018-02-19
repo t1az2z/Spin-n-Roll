@@ -58,6 +58,7 @@ public class GameManagment : MonoBehaviour
     public int deaths = 0;
     private void Awake()
     {
+        Cursor.visible = false;
         audioManager = FindObjectOfType<AudioManager>();
     }
     void Start ()
@@ -230,7 +231,7 @@ public class GameManagment : MonoBehaviour
         if (nextSceneIndex == SceneManager.sceneCountInBuildSettings)
         {
 
-            nextSceneIndex = 1; //todo show end titles =)
+            nextSceneIndex = 1; 
         }
         if (currentState == State.Transcending)
         {
@@ -245,14 +246,16 @@ public class GameManagment : MonoBehaviour
 
     private void ThemeChangeForTitles(int nextSceneIndex)
     {
-        if (nextSceneIndex == 15 && audioManager)
+        if (!audioManager)
+            return;
+        if (nextSceneIndex == 15)
         {
             audioManager.Stop("Theme");
             audioManager.Play("Titles");
         }
         else
         {
-            if (!audioManager.IsPlaying("Theme") && audioManager)
+            if (!audioManager.IsPlaying("Theme"))
             {
                 audioManager.Stop("Titles");
                 audioManager.Play("Theme");
